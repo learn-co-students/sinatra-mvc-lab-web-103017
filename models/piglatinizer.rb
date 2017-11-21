@@ -6,7 +6,6 @@ class PigLatinizer
 
   def piglatinize(word)
     vowels = ["a","e","i","o","u"]
-    consonants = ("a".."z").to_a - vowels
     if vowels.include?(word.downcase[0])
       latin_word = word + "way"
       return latin_word
@@ -23,14 +22,12 @@ class PigLatinizer
     latinized = []
     vowels = ["a","e","i","o","u"]
     phrase.each do |word|
-
       if vowels.include?(word.downcase[0])
         latinized << word + "way"
       else
         parts = word.split(/([aeiou].*)/)
         latinized << parts[1] + parts[0] + "ay"
       end
-
     end
     latinized.join(' ')
   end
