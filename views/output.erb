@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>OUTPUT</title>
+  </head>
+  <body>
+    <h1>This is your Pig Latin</h1>
+
+    <% word = PigLatinizer.new %>
+    <% output = word.to_pig_latin(params[:user_phrase].to_s) %>
+    <h1>Output: <%= output %> </h1>
+
+
+  </body>
+</html>
